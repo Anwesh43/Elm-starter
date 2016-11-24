@@ -1,3 +1,5 @@
 module Main exposing (..)
 import Html exposing (text)
-main = text "Hello World this is my first elm experiment"
+ask :String -> String
+ask thing = "Hey "++thing++" how are you?"
+main = text <| ask "John"
