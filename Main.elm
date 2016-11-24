@@ -4,4 +4,6 @@ ask :String -> String -> String
 ask thing place = "Hey "++thing++" how are you? How is the weather in "++place++"? "
 sayBye :String -> String
 sayBye phrase = phrase++"Ok Bye!!"
-main = text <| sayBye <| ask "John" "China"
+askThenSayByeToJohn :String -> String
+askThenSayByeToJohn = sayBye << (ask "John")
+main = text <| askThenSayByeToJohn "Mumbai"
