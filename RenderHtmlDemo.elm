@@ -7,5 +7,5 @@ studentToString :Student -> String
 studentToString student = student.name++","++student.subject
 students = [{name="A1",subject="Maths"},{name="A2",subject="Science"},{name="A3",subject="Physics"}]
 renderStudent student = li [style [("background","green")]] [text  <| studentToString student]
-renderStudents students = div [style [("border","1px solid black"),("width","140px"),("height","100px")]] [ul [] (List.map renderStudent students)]
+renderStudents students = div [style [("border","1px solid black"),("width","200px"),("height","200px")]] [h1 [][text "Students"],ul [] (List.map renderStudent students)]
 main = renderStudents students
