@@ -11,4 +11,4 @@ findPeople name people = List.foldl (\peep memo -> case memo of
                                   Nothing -> if peep.name == name then
                                               Just peep
                                               else Nothing) Nothing people
-main = text <| toString <| findPeople "A2" people
+main = text <| toString <| findPeople "A4" people
